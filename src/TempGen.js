@@ -85,7 +85,14 @@ class TempGen extends Component {
         });
     };
 
-   
+    saveMeme = () => {
+        let name = document.getElementById("memename").value
+        name.length > 0 ?
+            svg.saveSvgAsPng(document.getElementById("svg_ref"), `${name}.png`) :
+            svg.saveSvgAsPng(document.getElementById("svg_ref"), "meme.png")
+
+                
+    };
 
 
     resetBoxes = () => {
