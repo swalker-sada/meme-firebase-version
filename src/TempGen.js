@@ -85,29 +85,8 @@ class TempGen extends Component {
         });
     };
 
-    saveMeme = () => {
-        let name = document.getElementById("memename").value
-        name.length > 0 ?
-            svg.saveSvgAsPng(document.getElementById("svg_ref"), `${name}.png`) :
-            svg.saveSvgAsPng(document.getElementById("svg_ref"), "meme.png")
+   
 
-            svg.svgAsPngUri(document.getElementById("svg_ref")).then(image_source => {
-                //console.log(image_source);
-                const sessionId = this.getAll();
-                const meme = this.props.meme;
-                meme['sessionid'] = sessionId;
-                meme['memename'] = document.getElementById("memename").value;
-                meme['toptext'] = document.getElementById("toptext").value;
-                meme['bottomtext'] = document.getElementById("bottomtext").value;
-                meme['image_source'] = image_source;
-    
-              //  update(meme,sessionId)
-                  
-    
-            });
-
-            
-    };
 
     resetBoxes = () => {
         this.setState({
@@ -133,7 +112,7 @@ class TempGen extends Component {
         }
     }
     memeLikeHandler = () => {
-        const noOfLikes = this.props.memeInfo?.likes ? +this.props.memeInfo?.likes + 1 : 1
+        const noOfLikes = this.props.memeInfo?.likes ? + this.props.memeInfo?.likes + 1 : 1
         if (!this.props.memeInfo) {
             const data = { memeId: this.props?.meme?.id, likes: noOfLikes }
             MemeLikesService.create(data)

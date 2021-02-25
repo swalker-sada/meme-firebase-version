@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Image from "./Image";
 import "./ImageList.css"
-import logo from './images/canada.png';
+import logo from './images/usa.jpg'
 
 
 export default class Gallery extends Component {
@@ -10,6 +10,7 @@ export default class Gallery extends Component {
    
 
   }
+ 
 
   getMemesWithHigherLikes = () => {
     let memesWithLikes = [];
