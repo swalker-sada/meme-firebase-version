@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Image from "./Image";
 import "./ImageList.css"
-import logo from './images/canada.png';
+import logo from './images/gcp.png';
 
 
 export default class Gallery extends Component {
