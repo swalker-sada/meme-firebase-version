@@ -91,20 +91,7 @@ class TempGen extends Component {
             svg.saveSvgAsPng(document.getElementById("svg_ref"), `${name}.png`) :
             svg.saveSvgAsPng(document.getElementById("svg_ref"), "meme.png")
 
-            svg.svgAsPngUri(document.getElementById("svg_ref")).then(image_source => {
-                //console.log(image_source);
-                const sessionId = this.getAll();
-                const meme = this.props.meme;
-                meme['sessionid'] = sessionId;
-                meme['memename'] = document.getElementById("memename").value;
-                meme['toptext'] = document.getElementById("toptext").value;
-                meme['bottomtext'] = document.getElementById("bottomtext").value;
-                meme['image_source'] = image_source;
-    
-              //  update(meme,sessionId)
                   
-    
-            });
 
             
     };
